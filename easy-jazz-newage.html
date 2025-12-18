@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoCollection</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="container-tablas">
+
+    <!-- ENCABEZADO SIMPLE -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Videocollection</strong> <span>by MRJOHN246</span></a>
+                    </header>
+    <!-- SECCIÓN TABLA -->
+    <section class="table-section">
+        <h1>Easy listening • Jazz • New Age</h1><hr>
+        <p>Videos: 105 • Peso: 24,58 GiB • Tiempo de Reproducción: 06:10:10h</p>
+     <!-- SECCIÓN BUSCADOR-->   
+        <input type="text" id="buscador" placeholder="Buscar en toda la tabla...">
+
+        <div class="table-wrapper">
+            <table class="video-table">
+                <thead>
+                    <tr>
+                    <th tabindex="0">#</th>
+                    <th tabindex="0">Artist</th>
+                    <th tabindex="0">Track</th>
+                    <th tabindex="0">Resolution</th>
+                    <th tabindex="0">FPS</th>
+                    <th tabindex="0">Bitrate</th>
+                    <th tabindex="0">Codec</th>
+                    <th tabindex="0">Size</th>
+                    <th tabindex="0">Audio Tracks</th>
+                    <th tabindex="0">Directory</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                    <tr>
+                    <td>1</td>
+                    <td>Diana Krall - The Look Of Love</td>
+                    <td>1920x1080, 59.94 Fps, 25.0 Mb/s</td>
+                    <td>AVC</td>
+                    <td>705,19 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>Enya - Amarantine</td>
+                    <td>720x480, 29.97 Fps, 7611 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>168,18 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>3</td>
+                    <td>Enya - It&#39;s In The Rain</td>
+                    <td>720x480, 29.97 Fps, 7626 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>204,98 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>4</td>
+                    <td>Enya - May It Be (BSO El señor de los anillos)</td>
+                    <td>720x480, 29.97 Fps, 6558 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>170,19 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>5</td>
+                    <td>Enya - Only Time</td>
+                    <td>3840x1986, 25.00 Fps, 16.5 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>424,56 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>6</td>
+                    <td>Enya - Wild Child</td>
+                    <td>720x576, 25.00 Fps, 9112 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>249,94 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>7</td>
+                    <td>Era - Divano</td>
+                    <td>720x576, 25.00 Fps, 7829 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>207,24 MiB</td>
+                    <td>2ch FrontLR FLAC 48kHz 16bit 909kbps; 6ch FrontLCR,SideLR,LFE DTS 48kHz 24bit 1509kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>Era - Infanati</td>
+                    <td>720x576, 25.00 Fps, 6395 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>170,62 MiB</td>
+                    <td>6ch FrontLCR,SideLR,LFE DTS 48kHz 24bit 1509kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>9</td>
+                    <td>Era - The Mass</td>
+                    <td>720x576, 25.00 Fps, 5439 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>142,38 MiB</td>
+                    <td>6ch FrontLCR,SideLR,LFE DTS 48kHz 24bit 1509kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>10</td>
+                    <td>Michael Bublé - Crazy Love</td>
+                    <td>1920x1080, 25.00 Fps, 3681 kb/s</td>
+                    <td>AVC</td>
+                    <td>94,83 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz 128kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>11</td>
+                    <td>Michael Bublé - Everything</td>
+                    <td>1920x1080, 25.00 Fps, 3700 kb/s</td>
+                    <td>AVC</td>
+                    <td>93,92 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz 128kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>12</td>
+                    <td>Michael Bublé - Feeling Good</td>
+                    <td>3250x1922, 23.97 Fps, 20.2 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>571,62 MiB</td>
+                    <td>Eng 2ch PCM 44kHz 24bit 2116kbps; Eng 6ch FrontLCR,SideLR,LFE E-AC-3 48kHz 768kbps; Eng 2ch FrontLR Opus 48kHz</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>13</td>
+                    <td>Norah Jones - Don&#39;t Know Why</td>
+                    <td>720x480, 29.97 Fps, 6475 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>141,78 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>14</td>
+                    <td>Norah Jones - Sunrise</td>
+                    <td>720x480, 29.97 Fps, 7639 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>175,81 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 384kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>15</td>
+                    <td>Norah Jones - What Am I to You</td>
+                    <td>720x576, 25.00 Fps, 7675 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>199,36 MiB</td>
+                    <td>6ch FrontLCR,SideLR,LFE AC-3 48kHz 448kbps; 2ch FrontLR AC-3 48kHz 224kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>16</td>
+                    <td>Robbie Williams & Nicole Kidman - Somethin&#39; Stupid</td>
+                    <td>1920x1080, 29.97 Fps, 20.9 Mb/s</td>
+                    <td>AVC</td>
+                    <td>471,11 MiB</td>
+                    <td>Eng 6ch FrontLCR,SideLR,LFE DTS 48kHz 16bit</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>17</td>
+                    <td>Sarah Brightman - Ave Maria</td>
+                    <td>720x480, 29.97 Fps, 7292 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>153,88 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 448kbps</td>
+                    <td>00&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>18</td>
+                    <td>2Cellos - Love Story</td>
+                    <td>1920x1080, 7842 kb/s</td>
+                    <td>AVC</td>
+                    <td>204,21 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>19</td>
+                    <td>2Cellos - Vivaldi Storm</td>
+                    <td>1920x1080, 7840 kb/s</td>
+                    <td>AVC</td>
+                    <td>147,30 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>20</td>
+                    <td>Andra Day - Rise Up (Inspiration Version)</td>
+                    <td>1280x720, 2795 kb/s</td>
+                    <td>AVC</td>
+                    <td>99,30 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>21</td>
+                    <td>Andrea Bocelli With Tony Bennett - New York, New York</td>
+                    <td>1920x1080, 29.97 Fps, 21.5 Mb/s</td>
+                    <td>AVC</td>
+                    <td>595,28 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>22</td>
+                    <td>Andrea Griminelli - The Flight Of The Bumblebee (The Tale Of Tsar Saltan)</td>
+                    <td>1920x1080, 29.97 Fps, 21.6 Mb/s</td>
+                    <td>AVC</td>
+                    <td>265,25 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>23</td>
+                    <td>David Garrett - Viva la vida</td>
+                    <td>1920x1080, 29.97 Fps, 23.4 Mb/s</td>
+                    <td>AVC</td>
+                    <td>748,02 MiB</td>
+                    <td>2ch FrontLR PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>24</td>
+                    <td>Dee Dee Bridgewater feat. Irvin Mayfield & The New Orleans Jazz Orchestra - House of the Rising Sun</td>
+                    <td>1920x1080, 3912 kb/s</td>
+                    <td>AVC</td>
+                    <td>125,79 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>25</td>
+                    <td>Frank Sinatra -Jingle Bells (2011 Remaster)</td>
+                    <td>3840x2160, 23.97 Fps, 16.2 Mb/s</td>
+                    <td>VP9</td>
+                    <td>242,27 MiB</td>
+                    <td>Eng 2ch FrontLR AAC 44kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>26</td>
+                    <td>Gregory Porter - Consequence of Love</td>
+                    <td>1920x1080, 7701 kb/s</td>
+                    <td>AVC</td>
+                    <td>195,33 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>27</td>
+                    <td>Gregory Porter - Holding On</td>
+                    <td>1280x720, 2257 kb/s</td>
+                    <td>AVC</td>
+                    <td>88,07 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>28</td>
+                    <td>Joey Alexander - O Come All Ye Faithful (Adeste Fideles) (In-studio Performance)</td>
+                    <td>1920x1080, 3663 kb/s</td>
+                    <td>AVC</td>
+                    <td>130,96 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>29</td>
+                    <td>Joey Alexander - What a Friend We Have in Jesus (In-studio Performance)</td>
+                    <td>1920x1080, 4188 kb/s</td>
+                    <td>AVC</td>
+                    <td>159,53 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>30</td>
+                    <td>Lang Lang - No. 1, Andantino (Ivan Sings) (Khachaturian Children&#39;s Album for Piano, Book 1)</td>
+                    <td>1920x1080, 2048 kb/s</td>
+                    <td>AVC</td>
+                    <td>23,31 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>31</td>
+                    <td>Libera - Carol of the Bells</td>
+                    <td>3840x2160, 25.00 Fps, 17.3 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>380,79 MiB</td>
+                    <td>Eng 2ch FrontLR Opus 48kHz 32bit; Eng 2ch FrontLR AAC 44kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>32</td>
+                    <td>Melody Gardot - Same to You</td>
+                    <td>854x480, 25.00 Fps, 2633 kb/s</td>
+                    <td>AVC</td>
+                    <td>39,91 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>33</td>
+                    <td>Michael Bublé - Close Your Eyes</td>
+                    <td>720x480, 29.97 Fps, 6243 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>156,75 MiB</td>
+                    <td>2ch MPEG Audio 48kHz 320kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>34</td>
+                    <td>Michael Bublé - I Believe in You</td>
+                    <td>1920x1080, 7089 kb/s</td>
+                    <td>AVC</td>
+                    <td>180,23 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>35</td>
+                    <td>Michael Bublé - Love You Anymore</td>
+                    <td>1920x800, 4303 kb/s</td>
+                    <td>AVC</td>
+                    <td>100,70 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>36</td>
+                    <td>Michael Bublé - Nobody but Me</td>
+                    <td>1920x1080, 8016 kb/s</td>
+                    <td>AVC</td>
+                    <td>209,44 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>37</td>
+                    <td>Michael Bublé - When I Fall in Love</td>
+                    <td>1920x1080, 3751 kb/s</td>
+                    <td>AVC</td>
+                    <td>78,92 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>38</td>
+                    <td>Norah Jones - Carry On</td>
+                    <td>1920x1080, 23.97 Fps, 7157 kb/s</td>
+                    <td>AVC</td>
+                    <td>147,24 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>39</td>
+                    <td>Norah Jones - Everybody Needs a Best Friend (BSO Ted)</td>
+                    <td>720x480, 29.97 Fps, 9539 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>165,43 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>40</td>
+                    <td>Sarah McKenzie - Paris In the Rain</td>
+                    <td>1920x1080, 5760 kb/s</td>
+                    <td>AVC</td>
+                    <td>154,76 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>41</td>
+                    <td>Sarah McKenzie - Quoi, Quoi, Quoi</td>
+                    <td>1280x720, 25.00 Fps, 5354 kb/s</td>
+                    <td>AVC</td>
+                    <td>117,45 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>42</td>
+                    <td>Stacey Kent - To Say Goodbye</td>
+                    <td>1920x1080, 3931 kb/s</td>
+                    <td>AVC</td>
+                    <td>149,30 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>43</td>
+                    <td>Susan Boyle - Unchained Melody</td>
+                    <td>720x480, 29.97 Fps, 9559 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>275,88 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>44</td>
+                    <td>The Ayoub Sisters feat. Royal Philharmonic Orchestra & Mark Messenger - Uptown Funk</td>
+                    <td>1920x1080, 7308 kb/s</td>
+                    <td>AVC</td>
+                    <td>199,02 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>45</td>
+                    <td>Tony Bennett & Diana Krall - Fascinating Rhythm</td>
+                    <td>1920x1080, 23.97 Fps, 11.3 Mb/s</td>
+                    <td>AVC</td>
+                    <td>220,62 MiB</td>
+                    <td>2ch PCM 96kHz 24bit 4608kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>46</td>
+                    <td>Tony Bennett & Diana Krall - Love Is Here to Stay</td>
+                    <td>1920x1080, 23.97 Fps, 11.9 Mb/s</td>
+                    <td>AVC</td>
+                    <td>381,53 MiB</td>
+                    <td>2ch PCM 96kHz 24bit 4608kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>47</td>
+                    <td>Tony Bennett Duet With  Lady Gaga - The Lady is a Tramp</td>
+                    <td>1920x1080, 29.97 Fps, 32.3 Mb/s</td>
+                    <td>AVC</td>
+                    <td>762,33 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>48</td>
+                    <td>Tony Bennett Duet With Amy Winehouse - Body and Soul</td>
+                    <td>1920x1080, 29.97 Fps, 32.3 Mb/s</td>
+                    <td>AVC</td>
+                    <td>789,73 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>49</td>
+                    <td>Tony Bennett Duet With Aretha Franklin - How Do You Keep the Music Playing</td>
+                    <td>1920x1080, 29.97 Fps, 32.3 Mb/s</td>
+                    <td>AVC</td>
+                    <td>1,09 GiB</td>
+                    <td>Eng 2ch PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>50</td>
+                    <td>Tony Bennett Duet With Michael Bublé - Don&#39;t Get Around Much Anymore</td>
+                    <td>1920x1080, 29.97 Fps, 32.2 Mb/s</td>
+                    <td>AVC</td>
+                    <td>613,03 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>51</td>
+                    <td>Tony Bennett Duet With Norah Jones - Speak Low</td>
+                    <td>1920x1080, 29.97 Fps, 32.3 Mb/s</td>
+                    <td>AVC</td>
+                    <td>888,43 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 24bit 2304kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>52</td>
+                    <td>Tony Bennett feat. Lady Gaga - It Don’t Mean a Thing (If It Ain’t Got That Swing)</td>
+                    <td>1920x800, 23.97 Fps, 16.6 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>274,90 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>10&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>53</td>
+                    <td>Daniel Hope & Christoph Israel – Guglielmi La vie en rose</td>
+                    <td>1920x1080, 3970 kb/s</td>
+                    <td>AVC</td>
+                    <td>73,96 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>54</td>
+                    <td>Guitar Voices - Hotel California</td>
+                    <td>1920x1080, 3487 kb/s</td>
+                    <td>AVC</td>
+                    <td>149,85 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>55</td>
+                    <td>Guitar Voices - La Malagueña</td>
+                    <td>1920x1080, 5029 kb/s</td>
+                    <td>AVC</td>
+                    <td>198,43 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>56</td>
+                    <td>Jon Batiste - 5th Symphony in Congo Square</td>
+                    <td>1920x1080, 23.97 Fps, 4458 kb/s</td>
+                    <td>AVC</td>
+                    <td>145,28 MiB</td>
+                    <td>2ch PCM 44kHz 16bit 1411kbps</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>57</td>
+                    <td>Jon Batiste - Für Elise - Batiste</td>
+                    <td>1920x1080, 23.97 Fps, 4208 kb/s</td>
+                    <td>AVC</td>
+                    <td>133,87 MiB</td>
+                    <td>2ch PCM 44kHz 16bit 1411kbps</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>58</td>
+                    <td>Lang Lang, Royal Philharmonic Orchestra & Robert Ziegler - Beauty and the Beast (From Beauty and the Beast)</td>
+                    <td>1920x1080, 5121 kb/s</td>
+                    <td>AVC</td>
+                    <td>150,45 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>59</td>
+                    <td>Marcin - Carmen Habanera on One Guitar</td>
+                    <td>1920x1080, 4785 kb/s</td>
+                    <td>AVC</td>
+                    <td>118,61 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>60</td>
+                    <td>Marcin - Chopin Nocturne</td>
+                    <td>1920x1080, 5673 kb/s</td>
+                    <td>AVC</td>
+                    <td>189,33 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>61</td>
+                    <td>Marcin - Layla on One Acoustic Guitar</td>
+                    <td>1920x1080, 4426 kb/s</td>
+                    <td>AVC</td>
+                    <td>98,25 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>62</td>
+                    <td>Marcin - Toccata</td>
+                    <td>1920x1080, 4788 kb/s</td>
+                    <td>AVC</td>
+                    <td>156,86 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>63</td>
+                    <td>Melody Gardot feat. António Zambujo - C’est Magnifique</td>
+                    <td>1920x1080, 7357 kb/s</td>
+                    <td>AVC</td>
+                    <td>257,03 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>64</td>
+                    <td>Michael Bublé - Quizás, Quizás, Quizás (Lyric Video)</td>
+                    <td>1920x1080, 23.97 Fps, 2076 kb/s</td>
+                    <td>AVC</td>
+                    <td>48,19 MiB</td>
+                    <td>2ch PCM 44kHz 16bit 1411kbps</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>65</td>
+                    <td>Nina Simone - Feeling Good</td>
+                    <td>1920x1080, 6451 kb/s</td>
+                    <td>AVC</td>
+                    <td>140,55 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>66</td>
+                    <td>Nina Simone - I Put a Spell on You</td>
+                    <td>3840x2160, 25.00 Fps, 10.6 Mb/s</td>
+                    <td>VP9</td>
+                    <td>192,84 MiB</td>
+                    <td>Eng 2ch FrontLR AAC 44kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>67</td>
+                    <td>Ray Charles - Hit the Road Jack (Official Lyrics Video)</td>
+                    <td>1920x1080, 7371 kb/s</td>
+                    <td>AVC</td>
+                    <td>107,57 MiB</td>
+                    <td>2ch FrontLR AAC 48kHz</td>
+                    <td>20&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>68</td>
+                    <td>Frank Sinatra Duet With Ella Fitzgerald - Can&#39;t We Be Friends</td>
+                    <td>720x480, 29.97 Fps, 7112 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>156,03 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>69</td>
+                    <td>Frank Sinatra Duet With Ella Fitzgerald - Moonlight In Vermont</td>
+                    <td>720x480, 29.97 Fps, 6273 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>95,81 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>70</td>
+                    <td>Frank Sinatra Duet With Elvis Presley - Love Me Tender</td>
+                    <td>720x480, 29.97 Fps, 8482 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>100,44 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>71</td>
+                    <td>Frank Sinatra Duet With Louis Armstrong - Birth Of The Blues</td>
+                    <td>720x480, 29.97 Fps, 4774 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>116,07 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>72</td>
+                    <td>Frank Sinatra Duet With Sammy Davis Jr. - Me and My Shadow</td>
+                    <td>720x480, 29.97 Fps, 5592 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>93,96 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>73</td>
+                    <td>Louis Armstrong - La vie en rose (Animated video)</td>
+                    <td>1920x1080, 24.00 Fps, 6735 kb/s</td>
+                    <td>AVC</td>
+                    <td>165,37 MiB</td>
+                    <td>2ch PCM 44kHz 16bit 1411kbps; 2ch FrontLR AAC 48kHz 320kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>74</td>
+                    <td>Louis Armstrong - Mack The Knife (A Theme From The Threepenny Opera)</td>
+                    <td>720x576, 25.00 Fps, 8726 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>191,21 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 224kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>75</td>
+                    <td>Nat King Cole - Unforgettable</td>
+                    <td>720x480, 29.97 Fps, 4561 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>56,13 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 256kbps; 6ch FrontLCR,SideLR,LFE AC-3 48kHz 448kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>76</td>
+                    <td>Nat King Cole - When I Fall In Love</td>
+                    <td>720x480, 29.97 Fps, 6289 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>107,32 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>50´s</td>
+                    </tr>
+                    <tr>
+                    <td>77</td>
+                    <td>Enya - Evening Falls...</td>
+                    <td>720x576, 25.00 Fps, 9095 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>255,09 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>78</td>
+                    <td>Enya - Exile</td>
+                    <td>720x576, 25.00 Fps, 9050 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>309,44 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>79</td>
+                    <td>Enya - Orinoco Flow</td>
+                    <td>2844x2160, 25.00 Fps, 18.5 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>492,57 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>80</td>
+                    <td>Enya - Storms in Africa</td>
+                    <td>720x576, 25.00 Fps, 9103 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>205,40 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>81</td>
+                    <td>Enya - The Celts</td>
+                    <td>3420x2160, 25.00 Fps, 18.2 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>404,15 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 224kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>82</td>
+                    <td>Harry Connick, Jr - IIt Had to Be You (Big Band and Vocals)(BSO Cuando Harry conoció a Sally)</td>
+                    <td>720x480, 29.97 Fps, 9171 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>185,43 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>83</td>
+                    <td>Kenny G - Going Home</td>
+                    <td>720x480, 29.97 Fps, 8938 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>272,25 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>80&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>84</td>
+                    <td>Enigma - Mea Culpa</td>
+                    <td>720x576, 25.00 Fps, 7347 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>215,64 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>85</td>
+                    <td>Enigma - Principles of Lust</td>
+                    <td>720x576, 25.00 Fps, 9644 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>245,07 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>86</td>
+                    <td>Enigma - Return to Innocence</td>
+                    <td>720x576, 25.00 Fps, 7553 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>265,46 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>87</td>
+                    <td>Enigma - Sadeness (Part 1)</td>
+                    <td>720x576, 25.00 Fps, 7491 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>225,95 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>88</td>
+                    <td>Enya - Anywhere Is</td>
+                    <td>3586x2160, 25.00 Fps, 15.1 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>404,55 MiB</td>
+                    <td>2ch FrontLR AAC 44kHz</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>89</td>
+                    <td>Enya - Book of Days</td>
+                    <td>720x576, 25.00 Fps, 9095 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>182,37 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>90</td>
+                    <td>Enya - Caribbean Blue</td>
+                    <td>2810x2160, 25.00 Fps, 18.5 Mb/s</td>
+                    <td>HEVC</td>
+                    <td>479,98 MiB</td>
+                    <td>Eng 2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>91</td>
+                    <td>Enya - How Can I Keep From Singing</td>
+                    <td>720x576, 25.00 Fps, 9081 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>220,32 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>92</td>
+                    <td>Enya - On My Way Home</td>
+                    <td>720x576, 25.00 Fps, 9085 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>295,58 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>93</td>
+                    <td>Enya - Only If...</td>
+                    <td>720x576, 25.00 Fps, 9116 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>219,64 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>94</td>
+                    <td>Era - Ameno</td>
+                    <td>720x576, 25.00 Fps, 8934 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>238,40 MiB</td>
+                    <td>2ch FrontLR FLAC 48kHz 16bit 894kbps; 6ch FrontLCR,SideLR,LFE DTS 48kHz 24bit 1509kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>95</td>
+                    <td>Era - Mother</td>
+                    <td>720x576, 25.00 Fps, 7189 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>212,38 MiB</td>
+                    <td>2ch FrontLR FLAC 48kHz 16bit 953kbps; 6ch FrontLCR,SideLR,LFE AC-3 48kHz 448kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>96</td>
+                    <td>Erotic Dreams - Temple of Love</td>
+                    <td>1920x1080, 60.00 Fps, 9095 kb/s</td>
+                    <td>HEVC</td>
+                    <td>304,03 MiB</td>
+                    <td>2ch FrontLR FLAC 48kHz 16bit</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>97</td>
+                    <td>Gregorian - Only You</td>
+                    <td>720x576, 25.00 Fps, 6153 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>165,79 MiB</td>
+                    <td>6ch FrontLCR,SideLR,LFE AC-3 48kHz 448kbps; 6ch FrontLCR,SideLR,LFE DTS 48kHz 16bit 1509kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>98</td>
+                    <td>Gregorian - The Sound of Silence</td>
+                    <td>720x576, 25.00 Fps, 7166 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>183,88 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 192kbps; 2ch FrontLR AC-3 48kHz 192kbps; 2ch FrontLR AC-3 48kHz 192kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>99</td>
+                    <td>Kenny G - Have Yourself a Merry Little Christmas</td>
+                    <td>720x480, 29.97 Fps, 8987 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>250,51 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>100</td>
+                    <td>Kenny G - Sentimental</td>
+                    <td>720x480, 29.97 Fps, 8980 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>275,64 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>101</td>
+                    <td>Kenny G - The Moment</td>
+                    <td>720x480, 29.97 Fps, 9137 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>302,44 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>102</td>
+                    <td>Natalie Cole - Unforgettable</td>
+                    <td>720x480, 29.97 Fps, 6419 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>158,70 MiB</td>
+                    <td>2ch PCM 48kHz 16bit 1536kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                    <tr>
+                    <td>103</td>
+                    <td>Sarah Brightman feat. Andrea Bocelli - Time to Say Goodbye</td>
+                    <td>720x480, 29.97 Fps, 6419 kb/s</td>
+                    <td>MPEG Video</td>
+                    <td>186,65 MiB</td>
+                    <td>2ch FrontLR AC-3 48kHz 448kbps</td>
+                    <td>90&#39;s</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    <!-- SECCIÓN PAGINACION-->   
+        <div id="paginacion"></div>
+    </section>
+</div>
+<!-- BOTON VOLVER ARRIBA-->   
+<a href="#" id="volver-arriba" title="Volver arriba">&#9650;</a>
+<!-- Scripts que ya usabas para las tablas -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/tabla-procesos.js"></script>
+<script src="assets/js/tablas.js"></script>
+</body>
+</html>
