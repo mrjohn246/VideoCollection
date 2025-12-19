@@ -62,8 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
   tiempoFormateado += `${horas} h`;
 
   // =========================
-  // 3) Crear tarjeta flotante
+  // 3) Crear "shell" (mueve tarjeta + pestaña)
   // =========================
+  const shell = document.createElement("div");
+  shell.className = "floating-shell";
+  document.body.appendChild(shell);
+
+  // Tarjeta (contenido) - primero
   const card = document.createElement("div");
   card.className = "music-card floating-card";
   card.innerHTML = `
@@ -87,19 +92,69 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   `;
-  document.body.appendChild(card);
+  shell.appendChild(card);
+
+  // Pestaña (derecha) - después (SOLO icono SVG)
+  const tab = document.createElement("button");
+  tab.type = "button";
+  tab.className = "floating-tab";
+  tab.setAttribute("aria-label", "Mostrar Totales");
+  tab.innerHTML = `
+  <span class="tab-ico tab-ico-open" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="tab-svg">
+      <path d="M14 6l-4 6 4 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
+  </span>
+
+  <!-- CERRAR (tarjeta visible) -->
+  <span class="tab-ico tab-ico-close" aria-hidden="true">
+    <svg viewBox="0 0 24 24" class="tab-svg">
+      <path d="M10 6l4 6-4 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
+  </span>
+`;
+  shell.appendChild(tab);
 
   // =========================
-  // 4) Estados (ready/hidden) + toggle
+  // 4) Estados: oculto por defecto en ≤ 1920x1080
   // =========================
-  const esMovil = window.innerWidth <= 600;
+  const esMenorOIgualA1920x1080 = (window.innerWidth <= 1920) || (window.innerHeight <= 1080);
 
-  if (esMovil) card.classList.add("hidden");
-  requestAnimationFrame(() => card.classList.add("ready"));
+  if (esMenorOIgualA1920x1080) shell.classList.add("hidden");
+  requestAnimationFrame(() => shell.classList.add("ready"));
 
-  card.addEventListener("click", () => {
-    card.classList.toggle("hidden");
+  function syncTabAria() {
+    tab.setAttribute(
+      "aria-label",
+      shell.classList.contains("hidden") ? "Mostrar Totales" : "Ocultar Totales"
+    );
+  }
+
+  function toggle() {
+    shell.classList.toggle("hidden");
+    syncTabAria();
+  }
+
+  tab.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggle();
   });
+
+  // Click en la tarjeta también alterna
+  card.addEventListener("click", toggle);
+
+  syncTabAria();
 
   // =========================
   // 5) Donut: Top 6 + "Otros"
@@ -141,15 +196,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const fromValue = parseFloat(currentText.replace(/[^\d.]/g, "")) || 0;
 
     const start = performance.now();
-    const duration = 380; // ms
+    const duration = 380;
 
     const step = (t) => {
       const p = Math.min(1, (t - start) / duration);
-      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      const eased = 1 - Math.pow(1 - p, 3);
       const v = fromValue + (toValue - fromValue) * eased;
 
       centerTxt.textContent = `${Math.round(v)}${suffix}`;
-
       if (p < 1) centerAnimId = requestAnimationFrame(step);
     };
 
@@ -159,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultCenter = () => animateCenter(totalVideos, "");
   defaultCenter();
 
-  // Evitar que tocar el donut/leyenda cierre la tarjeta
+  // Evitar que tocar donut/leyenda cierre la tarjeta
   const stop = (e) => e.stopPropagation();
   ["pointerdown", "click"].forEach(evt => pieWrap.addEventListener(evt, stop));
   pieWrap.addEventListener("pointerleave", defaultCenter);
@@ -210,7 +264,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startPct += pct;
   });
 
-  // No cerrar/abrir tocando el gráfico o la leyenda
   ["pointerdown", "click"].forEach(evt => {
     legend.addEventListener(evt, stop);
     pieChart.addEventListener(evt, stop);
