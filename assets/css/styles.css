@@ -119,12 +119,15 @@ h3 {
     }
 
     h3 {
-        font-size: 1.14em !important;
+        font-size: 1.3em !important;
         line-height: 1.25em;
     }
     p {
         line-height: 1.25em;
-       text-align: center;
+        text-align: center;
+    }
+    .info p {
+        margin: 0 !important;
     }
 }
 
@@ -137,6 +140,7 @@ hr {
 hr.major {
     margin: 0.7em 0;
     background-color: #ff3b6b;
+    height: 2px;
 }
 
 .align-left {
@@ -225,7 +229,7 @@ hr.major {
   position: fixed;
   left: -10px;
   top: 50%;
-  width: 321px;
+  width: 325px;
   z-index: 9999;
   border-radius: 0 20px 20px 0;
   overflow: hidden;
@@ -247,6 +251,12 @@ hr.major {
 }
 .floating-card .info p {
     line-height: 100%;
+    margin: 5px 0;
+}
+@media screen and (max-width: 736px) {
+.floating-card .info p {
+  margin: 0.2em 0 !important;
+    }
 }
 /* Visible (cuando tiene .ready y NO tiene .hidden) */
 .music-card.floating-card.ready:not(.hidden) {
@@ -306,7 +316,7 @@ hr.major {
   border-radius: 20px;
   padding: clamp(14px, 0.625vw, 18px);
   background-color: #19222f;
-  margin-top: 30px;
+  margin-top: 18px;
 }
 
 /* SVG donut */
@@ -485,15 +495,18 @@ hr.major {
 }
 
 .info p {
-    margin: 5px 0 0;
-    font-size: 16px;
+    margin: 0;
+    font-size: 13pt;
     color: #92949F !important;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 
-
-
+@media screen and (max-width: 736px) {
+.info p {
+        font-size: 11pt;
+        }
+}
 
 /* estilos para paginas con tablas */
 .container-tablas {
@@ -874,3 +887,4 @@ td .audio-toggle:focus-visible{
   50%     { transform: scaleY(0.50); }
   75%     { transform: scaleY(0.85); }
 }
+
