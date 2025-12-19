@@ -224,84 +224,104 @@ hr.major {
 }
 /* estilos para pagina tarjetas */
 
-/* Tarjeta flotante muestra totales */
-.music-card.floating-card {
+/* ventana flotante con pestana */
+:root{
+  --card-w: 325px;
+  --tab-w: 42px;
+}
+
+@media screen and (max-width: 736px){
+      :root{
+  --tab-w: 25px;
+}
+.floating-tab{
+  border-radius: 8px 0 0 8px;
+  height: 60px !important;
+    }
+
+}
+
+
+.floating-shell{
   position: fixed;
-  left: -10px;
+  left: 0;
   top: 50%;
-  width: 325px;
+  transform: translateY(-50%) translateX(0);
   z-index: 9999;
+
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+
+  opacity: 0;
+  transition: opacity .45s ease-out, transform .45s ease-out;
+}
+
+.floating-shell.ready{ opacity: 1; }
+
+/* Oculto: se esconde SOLO la tarjeta, queda visible la pestaña (derecha) */
+.floating-shell.hidden{
+  transform: translateY(-50%) translateX(calc(-1 * var(--card-w)));
+}
+
+/* Tarjeta */
+.music-card.floating-card{
+  width: var(--card-w);
   border-radius: 0 20px 20px 0;
   overflow: hidden;
-  min-height: auto;
   background-color: #1f2937;
-  opacity: 0;
-  transform: translateY(-50%) translateY(12px) scale(0.94);
   box-shadow: 0 4px 10px rgba(0,0,0,0.20);
-  transition:
-    opacity 0.45s ease-out,
-    transform 0.45s ease-out,
-    box-shadow 0.45s ease-out,
-    height 0.45s ease-out,
-    padding 0.45s ease-out;
+  padding: 16px;
   cursor: pointer;
 }
-.floating-card .info h3 {
-    line-height: 100%;
-}
-.floating-card .info p {
-    line-height: 100%;
-    margin: 5px 0;
-}
-@media screen and (max-width: 736px) {
-.floating-card .info p {
-  margin: 0.2em 0 !important;
-    }
-}
-/* Visible (cuando tiene .ready y NO tiene .hidden) */
-.music-card.floating-card.ready:not(.hidden) {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-  background-color: #1f2937;
+
+/* Pestaña derecha (solo icono SVG) */
+.floating-tab{
+  width: var(--tab-w);
+  height: 80px;
+  align-self: center;
+  transform: rotate(180deg);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  background: #ff3b6b;
+  color: #fff;
+
+  border-radius: 14px 0 0 14px;
+  box-shadow: -10px -4px 10px rgba(0,0,0,0.20);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* para que se vea pegada */
 }
 
-/* Oculta parcialmente */
-.music-card.floating-card.hidden {
-  opacity: 1;
-  transform: translateY(-50%) translateX(-90%) scale(0.98); /* ← AQUÍ decides cuánto se oculta */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  background-color: #ff3b6b; /* color cuando está oculta */
-  border-color: white;
+/* Contenedor de icono */
+.floating-tab .tab-ico{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Hover solo cuando está oculta (escritorio) */
-@media (hover: hover) {
-  .music-card.floating-card.hidden:hover {
-    transform: translateY(-50%) translateX(-90%) scale(1);
-    opacity: 1;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    cursor: pointer;
-  }
+/* SVG */
+.floating-tab .tab-svg{
+  width: 22px;
+  height: 22px !important;
+  fill: #fff;
+  opacity: 0.95;
 }
 
-@media (max-width: 600px) {
+/* Mostrar icono correcto según estado */
+.floating-shell.hidden .floating-tab .tab-ico-open{ display: flex; }
+.floating-shell.hidden .floating-tab .tab-ico-close{ display: none; }
 
-  .music-card.floating-card.hidden {
-    opacity: 1;
-    transform: translateY(-50%) translateX(-90%) scale(0.93);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    background-color: #ff3b6b; 
-    height: 80px;        
-    padding: 8px 12px;    
-    display: flex;
-    align-items: center;
-}
-  .music-card.floating-card.ready:not(.hidden) {
-    height: auto;
-    padding: 16px;
-  }
-}
+.floating-shell:not(.hidden) .floating-tab .tab-ico-open{ display: none; }
+.floating-shell:not(.hidden) .floating-tab .tab-ico-close{ display: flex; }
+
 
 /* estilos Donut-totales.js */
 
@@ -373,7 +393,7 @@ hr.major {
 .music-card.floating-card .pie-legend li{
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
   margin: 5px 0;
   color: #D1D5DB;
 
